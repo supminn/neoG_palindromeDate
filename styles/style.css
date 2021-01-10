@@ -45,12 +45,18 @@ body {
 .data-content {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 1rem;
     opacity: 1;
 }
 
 .social-media {
     height: 60%;
+    border-radius: 50%;
+    padding: 0.2rem 0.1rem;  
+}
+
+.social-media:hover{
+    box-shadow: 2px 2px 15px var(--black);
 }
 
 .social-links {
