@@ -39,6 +39,7 @@ const isPalindrome = (str1, str2, str3, dateFormat, dateString) => {
 }
 //Calls the function in different date format
 function callPalindrome() {
+    output.innerText = '';
     let dateVal = (date.value).split('-');
     isPalindrome(dateVal[1], dateVal[2], dateVal[0], 'MM/DD/YYYY', dateVal.join('-'));
     isPalindrome(dateVal[2], dateVal[1], dateVal[0], 'DD/MM/YYYY', dateVal.join('-'));

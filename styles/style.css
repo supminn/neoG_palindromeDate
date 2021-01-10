@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,300&display=swap');
+
+:root{
+    --themeColor: #43256c;
+    --themeBottom: #2b1e4a;
+    --topLeft: #f2c4e4;
+    --topMid: #714bfc;
+    --midMid:#b55fbf;
+    --bottomMid: #ff766e;
+    --bottomRight: #9f7499;
+    --fontColor: white;
+}
+
+body{
+    font-family: 'Fraunces', serif;
+    color: var(--fontColor);
+}
+.contents{
+    margin: auto;
+    max-width: 80%;
+    margin-top: 7rem;
+}
+.nav-bar, .data-content{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--themeBottom);
+    padding: 1rem;
+}
+
+.social-media{
+    height: 60%;
+}
+
+.social-links{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: medium;
+}
+
+#img-calendar{
+    width: 50%;
+    transform: rotate3d(1, 1, 1, 5deg);
+}
+
+.txt-output{
+    height: 35vh;
+}
