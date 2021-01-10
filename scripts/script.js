@@ -2,22 +2,30 @@ const btn = document.querySelector('#btn-check');
 const date = document.querySelector('#txt-date');
 const output = document.querySelector('.txt-output');
 
-//Setting max date to today
-let today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1;
+//Convert Date to String
+function dateToString(date){
+let dd = date.getDate();
+let mm = date.getMonth() + 1;
 if (dd < 10) {
     dd = '0' + dd
 }
 if (mm < 10) {
     mm = '0' + mm
 }
-let maxDate = today.getFullYear() + '-' + mm + '-' + dd;
+return date.getFullYear() + '-' + mm + '-' + dd;
+}
+
+//Setting max date to today
+let today = new Date();
+let maxDate = dateToString(today);
 date.setAttribute("max", maxDate);
 date.setAttribute("value", maxDate);
 
-const findNextPalindrome = () => {
-    
+const findNextPalindrome = (dateList) => {
+    let curDate = new Date(dateList.join('-'));
+    curDate.setDate(curDate.getDate() + 1);
+    console.log(dateToString(curDate));
+    // isPalindrome(dateToString(curDate));
 }
 
 //Check if palindrome
@@ -51,12 +59,8 @@ const isPalindrome = function (dateList, formatStr) {
 }
 
 //Calls the function in different date format
-function callPalindrome() {
-    output.innerText = '';
-    if (!date.value) {
-        output.innerText = `Provide a valid date.`;
-    }
-    let dateVal = (date.value).split('-');
+function callPalindrome(date) {
+    let dateVal = (date).split('-');
     //Check if palindrome in 4 formats
     isPalindrome(dateVal, 'MM/DD/YYYY');
     isPalindrome(dateVal, 'DD/MM/YYYY');
@@ -65,7 +69,19 @@ function callPalindrome() {
 }
 
 //Button trigger to check
-btn.addEventListener('click', callPalindrome);
+btn.addEventListener('click',() =>{
+    output.innerText = '';
+    if (!date.value) {
+        output.innerText = `Provide a valid date.`;
+    }
+    callPalindrome(date.value);
+});
+
+
+
+
+
+
 
 // let startDate = new Date("01/01/2021"); 
 //   let todayDate = new Date();
