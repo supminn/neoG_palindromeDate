@@ -64,8 +64,12 @@ padding: 0 6rem;
 }
 
 .social-links {
-    margin-block-start: 1em;
+    margin-block-start: 0.5em;
     font-size: medium;
+    border-radius: 2rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    border: 0.5px dotted var(--topLeft);
+    margin-left: auto;
 }
 
 nav h3{
@@ -116,4 +120,12 @@ nav h3{
 
 .txt-output{
     font-size: medium;
+}
+
+
+@media only screen and (max-width: 550px){
+    .nav-bar{
+        flex-flow: column wrap;
+        margin-right: auto;
+    }
 }
