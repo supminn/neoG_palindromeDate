@@ -23,7 +23,7 @@ body {
     margin-left: auto;
     margin-right: 0;
     width: 35%;
-    height: 85vh;
+    height: 86vh;
     background-image: linear-gradient(to bottom right, var(--topLeft), var(--topMid), var(--midMid), var(--bottomMid), var(--bottomRight));
 }
 
@@ -34,10 +34,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
+    height: 80vh;
     margin-top: 7rem;
     border-radius: 1rem;
-    background: linear-gradient(217deg, rgba(255,255,255,.1), rgba(67, 37, 108,0) 70.71%),
-            linear-gradient(45deg, rgba(0,0,0,0.5), rgba(67, 37, 108,0) 70.71%),
+    background: linear-gradient(217deg, rgba(43, 30, 74,0.7), rgba(67, 37, 108,0) 70.71%),
+            linear-gradient(55deg, rgba(0,0,0,0.5), rgba(67, 37, 108,0) 70.71%),
             linear-gradient(336deg,  rgba(113, 75, 252,0.4), rgba(67, 37, 108,0.3) 70.71%);
 }
 
@@ -45,8 +46,11 @@ body {
 .data-content {
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 2rem;
     opacity: 1;
+}
+.nav-bar{
+padding: 0 6rem;
 }
 
 .social-media {
@@ -56,13 +60,16 @@ body {
 }
 
 .social-media:hover{
-    box-shadow: 2px 2px 15px var(--black);
+    box-shadow: 4px 4px 10px var(--themeBottom), -4px -4px 10px var(--themeBottom);
 }
 
 .social-links {
     margin-block-start: 1em;
-    margin-block-end: 1em;
     font-size: medium;
+}
+
+nav h3{
+    margin-block-end: 0;
 }
 
 #img-calendar {
@@ -72,4 +79,41 @@ body {
 
 .txt-output {
     height: 35vh;
+}
+
+.app-content{
+    text-align: center;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    /* border: 2px solid white; */
+}
+
+#txt-date{
+    border-radius: 0.7rem;
+    padding: 0.2rem;
+    margin: 0.4rem;
+    font-family: inherit;
+    font-weight: bold;
+    outline: none;
+}
+
+#btn-check{
+    outline: none;
+    margin: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    border: transparent;
+    box-shadow:  0.2px 0.2px 4px var(--fontColor),-0.2px -0.2px 4px var(--fontColor);
+    font-weight: bold;
+    color: var(--fontColor);
+    background: linear-gradient(135deg, rgb(8, 146, 105),var(--themeColor) 90%);
+    cursor: pointer;
+}
+
+#btn-check:hover{
+    background: linear-gradient(135deg, rgb(241, 205, 44),var(--themeColor) 90%);
+}
+
+.txt-output{
+    font-size: medium;
 }
