@@ -53,7 +53,7 @@ const isPalindrome = function (dateList, formatStr) {
 //Calls the function in different date format
 function callPalindrome() {
     output.innerText = '';
-    if (!date.value) {
+  if (!date.value) {
         output.innerText = `Provide a valid date.`;
     }
     let dateVal = (date.value).split('-');
