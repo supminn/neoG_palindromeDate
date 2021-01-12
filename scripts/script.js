@@ -59,8 +59,13 @@ const isPalindrome = function (dateList, formatStr) {
 }
 
 //Calls the function in different date format
-function callPalindrome(date) {
-    let dateVal = (date).split('-');
+function callPalindrome() {
+    output.innerText = '';
+  if (!date.value) {
+        output.innerText = `Provide a valid date.`;
+    }
+    let dateVal = (date.value).split('-');
+
     //Check if palindrome in 4 formats
     isPalindrome(dateVal, 'MM/DD/YYYY');
     isPalindrome(dateVal, 'DD/MM/YYYY');
