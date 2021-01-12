@@ -120,12 +120,43 @@ nav h3{
 
 .txt-output{
     font-size: medium;
+    line-height: 2rem;
+    /* overflow: auto; */
 }
 
+.highlight{
+    font-style: italic;
+    font-weight: bold;
+    padding: 0 0.4rem;
+    border-radius: 0.5rem;
+    background-color: rgba(247, 94, 86, 0.5);
+}
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 850px){
+    body, .txt-output{
+        font-size: 90%;
+    }
+    .txt-output{
+        line-height: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .social-links{
+        height: 80%;
+        width: 80%;
+    }
     .nav-bar{
         flex-flow: column wrap;
         margin-right: auto;
+    }
+    body, .txt-output{
+        font-size: 100%;
+    }
+
+    .data-content{
+        flex-flow: column-reverse wrap;
+        justify-content: center;
+        text-align: center;
     }
 }
