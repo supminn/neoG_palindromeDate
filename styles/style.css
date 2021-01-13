@@ -28,7 +28,6 @@ body {
 }
 
 .contents {
-    /* visibility: hidden; */
     position: absolute;
     top: 35%;
     left: 50%;
@@ -67,8 +66,6 @@ padding: 0 6rem;
     margin-block-start: 0.5em;
     font-size: medium;
     border-radius: 2rem;
-    padding: 0.5rem 0.5rem 0 0.5rem;
-    border: 0.5px dotted var(--topLeft);
     margin-left: auto;
 }
 
@@ -121,7 +118,6 @@ nav h3{
 .txt-output{
     font-size: medium;
     line-height: 2rem;
-    /* overflow: auto; */
 }
 
 .highlight{
@@ -142,21 +138,58 @@ nav h3{
 }
 
 @media only screen and (max-width: 750px){
-    .social-links{
-        height: 80%;
-        width: 80%;
+    .bg-sec-right{
+        width: 60%;
+        height: 100%;
+    }
+    .nav-bar{
+        padding: 0.2rem 1rem;
+    }
+    body, .txt-output{
+        font-size: 95%;
+    }
+    .data-content{
+        display: block;
+    }
+    #img-calendar{
+        visibility: hidden;
+    }
+    .app-content{
+        margin: auto;
+    }
+    .txt-output{
+        height: inherit;
+    }
+    .contents{
+        height: inherit;
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .contents{
+        margin-top: 30%;
+    }
+    .bg-sec-right{  
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 380px){
+    .contents{
+        margin-top: 10rem;
+    }
+    .bg-sec-right{
+        width: 100%;
+        height: 100%;
+    }
+    .data-content{
+        padding: 0 0.5rem;
     }
     .nav-bar{
         flex-flow: column wrap;
-        margin-right: auto;
-    }
-    body, .txt-output{
-        font-size: 100%;
-    }
-
-    .data-content{
-        flex-flow: column-reverse wrap;
-        justify-content: center;
         text-align: center;
+    }
+    .social-links{
+        margin-left: 0;
     }
 }
